@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -10,7 +11,10 @@ export default function Home() {
 
       <main>
         <h1 className="title">
-          Learn <a href="https://nextjs.org">Next.js!</a>
+          Read{" "}
+          <Link href="/posts/first-post">
+            <a>this page!</a>
+          </Link>
         </h1>
 
         <p className="description">
@@ -48,16 +52,16 @@ export default function Home() {
         </div>
       </main>
 
-      <footer>
+      {/* <footer>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
         </a>
-      </footer>
+      </footer> */}
 
       <style jsx>{`
         .container {
@@ -205,5 +209,5 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
